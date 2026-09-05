@@ -16,7 +16,7 @@ jobs:
       - name: Install
         run: pip install -r requirements.txt
       - name: Generate demo keys
-        run: python -m core.keys.generate --write-env .env
+        run: python -m core.keys.generate --write .env
       - name: Lint
         run: ruff check core agent merchants bench verify tests || true
       - name: Test
