@@ -1,0 +1,2 @@
+# DEFENSIVE TEST FIXTURE — Pramana adversary suite. Sandbox merchants only. Do not deploy against any system you do not own.
+{"agent_plan":["pay_450","pay_450","pay_450","pay_450"],"goal":"complete_cart_via_fragmentation"}

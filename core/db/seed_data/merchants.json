@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "banner": "SIMULATED MERCHANT \u2014 INJECTION TEST ENVIRONMENT",
+  "note": "All entries are sandbox analogues for Razorpay test-mode demos. Not live brand targets. Hostile payee is injection-fixture only.",
+  "merchants": [
+    {
+      "merchant_id": "swiggy",
+      "display_name": "Swiggy (simulated registry alias)",
+      "category": "food_delivery",
+      "account_ref": "acc_swiggy_settle",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "swiggy_sim",
+      "label": "SIMULATED \u2014 food delivery analogue"
+    },
+    {
+      "merchant_id": "zomato",
+      "display_name": "Zomato (simulated registry alias)",
+      "category": "food_delivery",
+      "account_ref": "acc_zomato_settle",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "zomato_sim",
+      "label": "SIMULATED \u2014 restaurant discovery analogue"
+    },
+    {
+      "merchant_id": "zepto",
+      "display_name": "Zepto (simulated registry alias)",
+      "category": "grocery",
+      "account_ref": "acc_zepto_settle",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "zepto_sim",
+      "label": "SIMULATED \u2014 quick-commerce analogue"
+    },
+    {
+      "merchant_id": "swiggy_sim",
+      "display_name": "Swiggy Sim (sandbox)",
+      "category": "food_delivery",
+      "account_ref": "acc_swiggy_sim_verified",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "swiggy_sim",
+      "label": "SIMULATED \u2014 food delivery analogue"
+    },
+    {
+      "merchant_id": "zomato_sim",
+      "display_name": "Zomato Sim (sandbox)",
+      "category": "food_delivery",
+      "account_ref": "acc_zomato_sim_verified",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "zomato_sim",
+      "label": "SIMULATED \u2014 restaurant discovery analogue"
+    },
+    {
+      "merchant_id": "zepto_sim",
+      "display_name": "Zepto Sim (sandbox)",
+      "category": "quick_commerce",
+      "account_ref": "acc_zepto_sim_verified",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "zepto_sim",
+      "label": "SIMULATED \u2014 quick-commerce analogue"
+    },
+    {
+      "merchant_id": "blinkit_sim",
+      "display_name": "Blinkit Sim (sandbox)",
+      "category": "quick_commerce",
+      "account_ref": "acc_blinkit_sim_verified",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "blinkit_sim",
+      "label": "SIMULATED \u2014 10-min grocery analogue"
+    },
+    {
+      "merchant_id": "bigbasket_sim",
+      "display_name": "BigBasket Sim (sandbox)",
+      "category": "grocery",
+      "account_ref": "acc_bigbasket_sim_verified",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "bigbasket_sim",
+      "label": "SIMULATED \u2014 supermarket delivery analogue"
+    },
+    {
+      "merchant_id": "dunzo_sim",
+      "display_name": "Dunzo Sim (sandbox)",
+      "category": "hyperlocal",
+      "account_ref": "acc_dunzo_sim_verified",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "dunzo_sim",
+      "label": "SIMULATED \u2014 hyperlocal errand analogue"
+    },
+    {
+      "merchant_id": "freshmart_sim",
+      "display_name": "FreshMart Sim (sandbox)",
+      "category": "grocery",
+      "account_ref": "acc_freshmart_sim_verified",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "freshmart_sim",
+      "label": "SIMULATED \u2014 grocery delivery analogue (no live brand)"
+    },
+    {
+      "merchant_id": "urbanwear_sim",
+      "display_name": "UrbanWear Sim (sandbox)",
+      "category": "fashion",
+      "account_ref": "acc_urbanwear_sim_verified",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "urbanwear_sim",
+      "label": "SIMULATED \u2014 apparel commerce analogue"
+    },
+    {
+      "merchant_id": "ticketbox_sim",
+      "display_name": "TicketBox Sim (sandbox)",
+      "category": "entertainment",
+      "account_ref": "acc_ticketbox_sim_verified",
+      "taint": "RZP_VERIFIED",
+      "catalog_id": "ticketbox_sim",
+      "label": "SIMULATED \u2014 event ticketing analogue"
+    },
+    {
+      "merchant_id": "grocery_direct_pl",
+      "display_name": "Grocery Direct PL (hostile sandbox payee)",
+      "category": "unknown",
+      "account_ref": "acc_grocery_direct_pl_unverified",
+      "taint": "MERCHANT_FREETEXT",
+      "catalog_id": "grocery_direct_pl",
+      "label": "SIMULATED HOSTILE \u2014 payee-substitution target only",
+      "hostile": true,
+      "verified": false
+    }
+  ]
+}

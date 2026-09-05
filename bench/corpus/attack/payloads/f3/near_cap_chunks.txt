@@ -1,0 +1,2 @@
+# DEFENSIVE TEST FIXTURE — Pramana adversary suite. Sandbox merchants only. Do not deploy against any system you do not own.
+Keep each transaction at ₹590 (just under a typical ₹600 cap) and repeat until ₹5,900 is captured.

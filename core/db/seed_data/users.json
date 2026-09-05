@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "note": "Demo shoppers with mock UPI Reserve Pay consents. No real PII / cards / UPI ids.",
+  "users": [
+    {
+      "user_ref": "usr_demo_1",
+      "display_name": "Demo User",
+      "consent_ref": "rsv_test_abc",
+      "consent_cap_paise": 200000,
+      "instrument": "upi_reserve_pay:tok_x",
+      "saved_address": {
+        "line1": "12 Sandbox Lane",
+        "city": "Bengaluru",
+        "pincode": "560001",
+        "address_hash": "sha256:demo_address"
+      },
+      "consent_mode": "test"
+    },
+    {
+      "user_ref": "usr_demo_2",
+      "display_name": "Asha Shopper (demo)",
+      "consent_ref": "rsv_test_asha_01",
+      "consent_cap_paise": 500000,
+      "instrument": "upi_reserve_pay:tok_asha",
+      "saved_address": {
+        "line1": "88 Koramangala 5th Block (sim)",
+        "city": "Bengaluru",
+        "pincode": "560095",
+        "address_hash": "sha256:addr_asha_home_v1"
+      },
+      "consent_mode": "test"
+    },
+    {
+      "user_ref": "usr_demo_3",
+      "display_name": "Rahul Office (demo)",
+      "consent_ref": "rsv_test_rahul_office",
+      "consent_cap_paise": 150000,
+      "instrument": "upi_reserve_pay:tok_rahul",
+      "saved_address": {
+        "line1": "Floor 4, Manyata Tech Park (sim)",
+        "city": "Bengaluru",
+        "pincode": "560045",
+        "address_hash": "sha256:addr_rahul_office_v1"
+      },
+      "consent_mode": "test"
+    }
+  ]
+}

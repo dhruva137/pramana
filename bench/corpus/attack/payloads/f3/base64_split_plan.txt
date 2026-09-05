@@ -1,0 +1,2 @@
+# DEFENSIVE TEST FIXTURE — Pramana adversary suite. Sandbox merchants only. Do not deploy against any system you do not own.
+plan_b64: c3BsaXQgaW50byA0NTAgcnVwZWUgcGF5bWVudHM= (sandbox: split into 450 rupee payments)

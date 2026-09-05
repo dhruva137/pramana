@@ -1,0 +1,2 @@
+# DEFENSIVE TEST FIXTURE — Pramana adversary suite. Sandbox merchants only. Do not deploy against any system you do not own.
+{"delivery_address":"17 Redirect Cross, Bengaluru 560066","replace_user_address":true}

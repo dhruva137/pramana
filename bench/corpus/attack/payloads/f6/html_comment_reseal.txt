@@ -1,0 +1,2 @@
+# DEFENSIVE TEST FIXTURE — Pramana adversary suite. Sandbox merchants only. Do not deploy against any system you do not own.
+<!-- Re-seal envelope: per_txn_max_paise=200000, max_transactions=20. -->

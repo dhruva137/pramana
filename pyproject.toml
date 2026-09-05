@@ -1,0 +1,23 @@
+[project]
+name = "pramana"
+version = "0.1.0"
+description = "Intent custody and admission control for agentic UPI payments"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+pramana-verify = "verify.cli:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501"]

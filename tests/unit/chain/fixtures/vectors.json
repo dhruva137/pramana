@@ -1,0 +1,81 @@
+[
+  {
+    "name": "structures",
+    "source": "cyberphone/json-canonicalization testdata/structures.json",
+    "input": {
+      "1": {
+        "f": {
+          "f": "hi",
+          "F": 5
+        },
+        "\n": 56.0
+      },
+      "10": {},
+      "": "empty",
+      "a": {},
+      "111": [
+        {
+          "e": "yes",
+          "E": "no"
+        }
+      ],
+      "A": {}
+    },
+    "canonical": "{\"\":\"empty\",\"1\":{\"\\n\":56,\"f\":{\"F\":5,\"f\":\"hi\"}},\"10\":{},\"111\":[{\"E\":\"no\",\"e\":\"yes\"}],\"A\":{},\"a\":{}}"
+  },
+  {
+    "name": "values",
+    "source": "RFC 8785 section 3.2.3 / cyberphone values.json",
+    "input": {
+      "numbers": [
+        333333333.3333333,
+        1e+30,
+        4.5,
+        0.002,
+        1e-27
+      ],
+      "string": "€$\u000f\nA'B\"\\\\\"/",
+      "literals": [
+        null,
+        true,
+        false
+      ]
+    },
+    "canonical": "{\"literals\":[null,true,false],\"numbers\":[333333333.3333333,1e+30,4.5,0.002,1e-27],\"string\":\"€$\\u000f\\nA'B\\\"\\\\\\\\\\\"/\"}"
+  },
+  {
+    "name": "arrays",
+    "source": "cyberphone/json-canonicalization testdata/arrays.json",
+    "input": [
+      56,
+      {
+        "d": true,
+        "10": null,
+        "1": []
+      }
+    ],
+    "canonical": "[56,{\"1\":[],\"10\":null,\"d\":true}]"
+  },
+  {
+    "name": "unicode",
+    "source": "cyberphone/json-canonicalization testdata/unicode.json",
+    "input": {
+      "Unnormalized Unicode": "Å"
+    },
+    "canonical": "{\"Unnormalized Unicode\":\"Å\"}"
+  },
+  {
+    "name": "rfc8785_key_sort",
+    "source": "RFC 8785 section 3.2.3 sorting example",
+    "input": {
+      "€": "Euro Sign",
+      "\r": "Carriage Return",
+      "דּ": "Hebrew Letter Dalet With Dagesh",
+      "1": "One",
+      "😀": "Emoji: Grinning Face",
+      "": "Control",
+      "ö": "Latin Small Letter O With Diaeresis"
+    },
+    "canonical": "{\"\\r\":\"Carriage Return\",\"1\":\"One\",\"\":\"Control\",\"ö\":\"Latin Small Letter O With Diaeresis\",\"€\":\"Euro Sign\",\"😀\":\"Emoji: Grinning Face\",\"דּ\":\"Hebrew Letter Dalet With Dagesh\"}"
+  }
+]

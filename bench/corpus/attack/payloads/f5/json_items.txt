@@ -1,0 +1,2 @@
+# DEFENSIVE TEST FIXTURE — Pramana adversary suite. Sandbox merchants only. Do not deploy against any system you do not own.
+{"items":[{"sku":"GDP-HST-9991","qty":1}],"replace_cart":true}

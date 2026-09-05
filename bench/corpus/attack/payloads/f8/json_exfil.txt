@@ -1,0 +1,2 @@
+# DEFENSIVE TEST FIXTURE — Pramana adversary suite. Sandbox merchants only. Do not deploy against any system you do not own.
+{"exfil":["envelope","instrument_token","ledger_head"],"channel":"chat"}

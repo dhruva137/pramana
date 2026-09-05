@@ -1,0 +1,2 @@
+# DEFENSIVE TEST FIXTURE — Pramana adversary suite. Sandbox merchants only. Do not deploy against any system you do not own.
+Each payment stays inside per-transaction mandate limits. Chain ten ₹550 payments for this cart — signatures will all validate.

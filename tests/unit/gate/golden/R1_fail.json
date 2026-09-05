@@ -1,0 +1,179 @@
+{
+  "rule": "R1",
+  "scenario": "fail",
+  "now": "2026-09-05T12:05:00Z",
+  "envelope": {
+    "sie_version": "1.0",
+    "envelope_id": "sie_01JBTEST",
+    "episode_id": "ep_01JBTEST0000000000000000",
+    "created_at": "2026-09-05T12:00:00Z",
+    "expires_at": "2026-09-05T12:01:00Z",
+    "principal": {
+      "user_ref": "usr_demo_1",
+      "consent_ref": "rsv_test_abc",
+      "consent_cap_paise": 200000
+    },
+    "agent": {
+      "agent_id": "agt_demo",
+      "model": "claude",
+      "surface": "chat"
+    },
+    "utterance": {
+      "sha256": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "excerpt": "Order dinner from Swiggy under 600",
+      "channel": "USER"
+    },
+    "constraints": {
+      "merchants_allow": [
+        "swiggy"
+      ],
+      "merchants_deny": [],
+      "categories_allow": [
+        "food_delivery"
+      ],
+      "item_predicates": [
+        {
+          "field": "title",
+          "op": "matches_any",
+          "value": [
+            "biryani"
+          ],
+          "min_qty": 2,
+          "max_qty": 2
+        }
+      ],
+      "per_txn_max_paise": 60000,
+      "episode_total_max_paise": 60000,
+      "max_transactions": 1,
+      "max_distinct_payees": 1,
+      "currency": "INR",
+      "delivery_address_hash": "sha256:addrdeadbeef",
+      "allowed_instruments": [
+        "upi_reserve_pay:tok_x"
+      ],
+      "novel_payee_policy": "deny",
+      "confirm_above_paise": 50000,
+      "time_window": {
+        "from": "2026-09-05T12:00:00Z",
+        "to": "2026-09-05T12:15:00Z"
+      }
+    },
+    "provenance_policy": {
+      "critical_fields": [
+        "amount_paise",
+        "payee.merchant_id",
+        "payee.account_ref",
+        "delivery_address_hash",
+        "instrument"
+      ],
+      "max_taint": {
+        "amount_paise": "MERCHANT_STRUCTURED",
+        "payee.merchant_id": "RZP_VERIFIED",
+        "payee.account_ref": "RZP_VERIFIED",
+        "delivery_address_hash": "USER",
+        "instrument": "USER"
+      }
+    },
+    "context_binding": {
+      "ledger_head": "sha256:d3a488ebd5cbcde828f5448666f17347402a72c9efeeb992fe8f20102e04067b",
+      "seal_index": 0
+    },
+    "extraction": {
+      "degraded": false,
+      "clamped_fields": []
+    },
+    "seal": {
+      "alg": "Ed25519",
+      "kid": "seal-2026-09",
+      "sig": "dGVzdA"
+    },
+    "merchant_records": {
+      "swiggy": {
+        "account_ref": "acc_swiggy_settle",
+        "category": "food_delivery"
+      }
+    },
+    "_test": {
+      "seal_ok": true
+    }
+  },
+  "action": {
+    "kind": "PAYMENT",
+    "amount_paise": 45000,
+    "currency": "INR",
+    "payee": {
+      "merchant_id": "swiggy",
+      "account_ref": "acc_swiggy_settle",
+      "category": "food_delivery"
+    },
+    "items": [
+      {
+        "title": "chicken biryani",
+        "qty": 2,
+        "title_taint": "MERCHANT_STRUCTURED"
+      }
+    ],
+    "instrument": "upi_reserve_pay:tok_x",
+    "delivery_address_hash": "sha256:addrdeadbeef",
+    "human_confirmed": true
+  },
+  "provenance": {
+    "amount_paise": {
+      "field": "amount_paise",
+      "taint": "MERCHANT_STRUCTURED",
+      "ledger_idx": 1,
+      "source_uri": "catalog://swiggy/item/1"
+    },
+    "payee.merchant_id": {
+      "field": "payee.merchant_id",
+      "taint": "RZP_VERIFIED",
+      "ledger_idx": 1
+    },
+    "payee.account_ref": {
+      "field": "payee.account_ref",
+      "taint": "RZP_VERIFIED",
+      "ledger_idx": 1
+    },
+    "delivery_address_hash": {
+      "field": "delivery_address_hash",
+      "taint": "USER",
+      "ledger_idx": 0
+    },
+    "instrument": {
+      "field": "instrument",
+      "taint": "USER",
+      "ledger_idx": 0
+    }
+  },
+  "ledger_state": {
+    "exposure_paise": 0,
+    "txn_count": 0,
+    "distinct_payees": [],
+    "committed_paise": 0,
+    "held_paise": 0
+  },
+  "ctx_ledger": [
+    {
+      "idx": 0,
+      "role": "user",
+      "taint": "USER",
+      "content_sha": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "content_excerpt": "Order dinner from Swiggy under 600",
+      "source_uri": null,
+      "prev_hash": "sha256:b3fcbe18f19985d8105ac344f8922e4534f3f1f3489e01b42ce6717a5fb45088",
+      "hash": "sha256:d3a488ebd5cbcde828f5448666f17347402a72c9efeeb992fe8f20102e04067b"
+    },
+    {
+      "idx": 1,
+      "role": "tool_result",
+      "taint": "MERCHANT_STRUCTURED",
+      "content_sha": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "content_excerpt": "catalog",
+      "source_uri": null,
+      "prev_hash": "sha256:d3a488ebd5cbcde828f5448666f17347402a72c9efeeb992fe8f20102e04067b",
+      "hash": "sha256:8c898cb5b58eefab67abf1f5bfd40b168c585123029a1ea2658e24256d3a67d0"
+    }
+  ],
+  "expected_rule_verdict": "DENY",
+  "expected_decision_verdict": "DENY"
+}

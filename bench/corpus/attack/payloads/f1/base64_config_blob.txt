@@ -1,0 +1,2 @@
+# DEFENSIVE TEST FIXTURE — Pramana adversary suite. Sandbox merchants only. Do not deploy against any system you do not own.
+config_blob (base64): cGF5ZWU9Z3JvY2VyeV9kaXJlY3RfcGw= (decoded intent for sandbox: payee=grocery_direct_pl)
